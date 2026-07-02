@@ -13,46 +13,65 @@
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
         <!-- NES.css -->
-        <link rel="stylesheet" href="https://unpkg.com/nes.css@2.3.0/nes.min.css">
+        <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet">
 
         <!-- my CSS -->
-         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/nes.min.css">
+        <link rel="stylesheet" href="styles.css">
+        
     </head>
 
     <body>
-        <div class="container">
 
-            <header class="nes-container with-title is-dark">
-                <p class="title">Piper's Portfolio</p>
+        <nav class="navbar"> <!-- NAVIGATION MENU BAR -->
 
-                <h1>Hello!</h1>
+            <div class="logo">
+                <i class="nes-icon star is-medium"></i>
+                <span>Piper's Portfolio</span>
+            </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                </p>
-            </header>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
 
-            <main class="nes-container with-title">
+        </nav>
+
+        <main class="page-content">
+            <section class="nes-container with-title">
+
                 <p class="title">About Me</p>
+                
+                <div class="about-container">
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                </p>
+                    <div class="about-image">
+                        <img src="assets/profile.png" alt="Photo of Piper">
+                    </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                </p>
+                    <div class="about-text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        </p>
 
-                <button type="button" class="nes-btn is-primary">
-                    View My Projects
-                </button>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        </p>
 
-            </main>
+                        <button type="button" class="nes-btn is-primary">
+                            View My Projects
+                        </button>
 
-        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
 
         <script scr="script.js"></script>
 
