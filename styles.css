@@ -1,194 +1,325 @@
-html,
-body,
-pre,
-code,
-kbd,
-samp {
-    font-family: "Press Start 2P", cursive;
+:root {
+    --bg: #0b0b12;
+    --border-blue: #4d7dff;
+    --border-purple: #a259ff;
+    --accent-blue: #4dd2ff;
+    --accent-purple: #d68cff;
+    --text-white: #ffffff;
 }
+
+* {box-sizing: border-box;}
 
 body {
-    background-color: #e4d9df;
-    margin: 0;
+    background: var(--bg);
+    color: var(--text-white);
+    font-family: "Press Start 2P", monospace;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-/*------NAVIGATION-------*/
+.page-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 4px solid var(--border-purple);
+    background: var(--bg);
+    padding: 10px;
+}
 
-.navbar {
+/*----------HEADER----------*/
+header.site-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    padding: 25px 50px;
-
-    border-bottom: 4px solid white;
+    justify-content: space-between;
+    padding: 18px 24px;
+    border-bottom: 4px dotted var(--border-blue);
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
-
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
+    gap: 12px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 30px;
+.logo .nes-icon {
+    transform: scale(1.1);
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    color: #a996a0;
-}
-
-/*--------MAIN CONTENT----------*/
-
-.page-content {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 20px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-}
-
-.nes-container {
-    margin-bottom: 10px;
-}
-
-.nes-container p {
-    line-height: 1.5;
-    margin-bottom: 1rem;
+.logo-text {
+    color: var(--accent-blue);
     font-size: 14px;
+    letter-spacing: 1px;
 }
 
-.nes-container.with-title {
-    position: relative;
-    margin-top: 30px;
-
-    background-color: #b097a5;
-    border: 4px solid white;
-    padding: 20px;
-}
-
-.nes-container.with-title > .title {
-    position: absolute;
-    top: -15px; /*above the ocntianer*/
-    left: 12px; /*align w left edge*/
-    padding: 1px 10px;
-
-    font-size: 20px;
-    color: #e4d0db;
-    background-color: #b097a5;
-}
-
-.nes-container.with-title.hero-section {
-    background-color: #b097a5;
-    border: 4px solid white;
-    padding: 30px 20px 20px 20px;
-    text-align: center;
-}
-
-.nes-container.with-title.hero-section > .title {
-    font-size: 28px;
-    color: #e4d0db;
-    background-color: #b097a5;
-    border: 4px solid #9b8692;
-
-    position: absolute;
-    top: -36px; /*above the ocntianer*/
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 2px 10px;
-}
-
-.hero-content {
+.nav.main-nav {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 22px;
+    font-size: 10px;
+}
+
+nav.main-nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    padding-bottom: 6px;
+}
+
+nav.main-nav a.active {
+    color: var(--accent-blue);
+    border-bottom: 4px solid var(--accent-blue);
+}
+
+nav.main-nav a:hover {
+    color: var(--accent-blue);
+}
+
+/*---------HERO--------*/
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 30px 24px;
+    flex-wrap: wrap;
 }
 
 .hero-text {
-    flex: 2;
-    text-align: left;
+    flex: 1 1 400px;
 }
 
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+.hero-text h1 {
+    color: var(--accent-blue);
+    font-size: 22px;;
+    margin: 0 0 16px 0;
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 300px;
-    border: 4px solid white;
-    image-rendering: pixelated;
-}
-
-.hero-buttons {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/*--------BUTTONS---------*/
-
-.btn-pink {
-    background-color:#dbb7cb;
-    color: white;
-    border-color: #ffffff;
-}
-
-.btn-pink:hover {
-    background-color: #a996a0;
-}
-
-/*------ABOUT PAGE-----------*/
-
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.about-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 300px;
-    border: 4px solid white;
-    image-rendering: pixelated;
-}
-
-.about-text {
-    flex: 2;
-}
-
-.about-text p {
-    line-height: 2;
+.hero-text p {
+    font-size: 11px;
+    color: var(--text-white);
     margin-bottom: 20px;
 }
 
-/*-------PROJECTS------*/
+.about-btn {
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    background-color: var(--accent-purple) !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: no-wrap;
+}
 
-.project-grid {
+.hero-image {
+    flex: 0 0 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-box {
+    width: 240px;
+    height: 160px;
+    border: 4px solid #ffffff;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-box svg {
+    width: 70%;
+    height: 70%
+}
+
+/*------ABOUT PAGE--------*/
+.about-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px 24px 30px 24px;
+    flex-wrap: wrap;
+}
+
+.about-hero-text {
+    flex: 1 1 500px;
+}
+
+.about-hero-text h1 {
+    color: var(--accent-blue);
+    font-size: 20px;
+    margin: 0 0 18px 0;
+}
+
+.about-hero-text p {
+    font-size: 11px;
+    color: white;
+    margin: 0;
+}
+
+.about-hero-image {
+    flex: 0 0 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-columns {
+    display: flex;
+    gap: 40px;
+    padding: 24px 24px 30px 24px;
+    flex-wrap: wrap;
+}
+
+.about-columns h2 {
+    color: var(--accent-blue);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 18px 0;
+}
+
+.skills-col {
+    flex: 1 1 400px;
+}
+
+.skills-sub-columns {
+    display: flex;
+    gap: 40px;
+}
+
+.skills-sub-columns ul, .education-col ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-sub-columns li, .education-col li {
+    font-size: 10px;
+    color: white;
+    padding: 4px 0;
+    position: relative;
+    padding-left: 14px;
+}
+
+.skills-sub-columns li::before, .education-col li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    background: white;
+}
+
+.education-col {
+    flex: 1 1 250px;
+}
+
+.education-col li {
+    margin-bottom: 12px;
+}
+
+/*-------CONTACT PAGE------*/
+.contact-wrap {
+    padding: 40px 24px;
+}
+
+.contact-card {
+    background: var(--border-blue) !important;
+    border-color: var(--border-blue) !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 32px !important;
+    flex-wrap: wrap;
+}
+
+.contact-card-text {
+    flex: 1 1 380px;
+}
+
+.contact-card-text h1 {
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 16px 0;
+}
+
+.contact-card-text > p {
+    font-size: 10px;
+    color: white;
+    margin: 0 0 26px 0;
+}
+
+.contact-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 30px;
+    gap: 14px;
+    max-width: 420px;
+}
+
+.contact-buttons .nes-btn {
+    background: var(--accent-purple) !important;
+    border-color: white !important;
+    color: white !important;
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px 14px;
+}
+
+.contact-image {
+    flex: 0 0 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----SECTION HEADERS--------*/
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    margin: 10px 0 20px 0;
+    border-bottom: 4px dotted var(--border-blue);
+    padding-bottom: 14px;
+}
+
+.section-header h2 {
+    color: var(--accent-blue);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.section-header a {
+    color: var(--text-white);
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.section-header a:hover {
+    color: var(--accent-blue);
+}
+
+/*--------PROJECTS---------*/
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 24px 30px 24px;
 }
 
 .project-card {
@@ -196,215 +327,404 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    gap: 15px;
-    padding: 20px;
+    padding: 18px !important;
 }
 
-.project-image {
+.project-card .thumb {
     width: 100%;
-    max-width: 300px;
-    height: 180px;
-    object-fit: cover;
-
-    border: 4px solid white;
-    image-rendering: pixelated;
-}
-
-.project-card h3 {
-    font-size: 16px;
-    margin-top: 0;
-}
-
-.project-card p {
-    font-size: 12px;
-    margin: 0;
-    line-height: 1.5;
-}
-
-.project-card .nes-btn {
-    margin-top: auto;
-}
-
-.grid-button {
-    grid-column: 1 / -1;
+    max-width: 220px;
+    height: 140px;
+    border: 3px solid white;
+    background: var(--bg);
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 15px 0;
 }
 
-.project-page h3 {
-    font-size: 14px;
-    margin-bottom: 25px;
+.project-card .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.project-hero-content {
+.project-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 25px;
+}
+
+.project-info h3 {
+    color: var(--accent-blue);
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    font-size: 8px;
+    color: #cfcfe0;
+    margin-bottom: 16px;
+}
+
+.project-info a {
+    font-size: 8px;
+    color: var(--accent-purple);
+    text-decoration: none;
+}
+
+.project-info a:hover {
+    text-decoration: underline;
+}
+
+.project-btn {
+    font-family: "Press Start 2P", monospace;
+    font-size: 8px;
+    background-color: var(--accent-purple) !important;
+    margin-top: 10px;
+}
+
+/*--------PROJECT DETAIL TEMPLATE------------*/
+.project-detail {
+    padding: 24px 24px 40px 24px;
+}
+
+.project-detail-title {
+    color: var(--accent-blue);
+    font-size: 20px;
+    margin: 0 0 24px 0;
+    padding-bottom: 14px;
+    border-bottom: 4px dotted var(--accent-blue);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-blue);
+    font-size: 13px;
+    margin: 36px 0 18px 0;
+    white-space: nowrap;
+}
+
+.section-title::after {
+    content: "";
+    flex: 1 1 auto;
+    border-bottom: 3px dotted var(--border-blue);
+    margin-top: 4px;
 }
 
 .project-hero-image {
-    flex: 1;
-    display: flex;
+    display:flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.project-hero-image img {
-    width: 100%;
-    max-width: 450px;
-    border: 4px solid white;
-    image-rendering: pixelated;
+.about-project {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
-.project-hero-text {
+.about-project h3 {
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin: 0 0 16px 0;
+}
+
+.about-project p {
+    font-size: 9px;
+    color: white;
+    margin: 0 0 14px 0;
+}
+
+.project-info-grid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
-.info-grid {
+.info-box {
+    flex: 1 1 320px;
+    padding: 18px !important;
+}
+
+.info-box.is-audience {
+    flex: 0 1 260px;
+}
+
+.info-rows {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: auto 1fr;
+    gap: 8px 20px;
+}
+
+.info-rows dt {
+    font-size: 9px;
+    color: var(--accent-blue);
+    grid-column: 1;
+}
+
+.info-rows dd {
+    font-size: 9px;
+    color: white;
+    margin: 0;
+    grid-column: 2;
+}
+
+.info-box-is-audience h4 {
+    color: var(--accent-blue);
+    font-size: 10px;
+    margin: 0 0 12px 0;
+}
+
+.info-box.is-audience ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.info-box-is-audience li {
+    font-size: 9px;
+    color: white;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.info-box-is-audience li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    background: white;
+}
+
+.role-text p{
+    font-size: 9px;
+    color: #d8d8e6;
+    margin: 0 0 14px 0;
+}
+ 
+.bullet-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+.bullet-list li{
+    font-size: 9px;
+    color: #ffffff;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.bullet-list li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
+}
+
+.challenge-box{
+    padding: 20px !important;
+    margin-bottom: 28px;
+}
+
+.challenge-tag{
+    display: inline-block;
+    font-size: 9px;
+    color: var(--accent-blue);
+    margin-bottom: 12px;
+}
+
+.challenge-box h4{
+    font-size: 10px;
+    color: var(--accent-purple);
+    margin: 16px 0 8px 0;
+}
+
+.challenge-box h4:first-of-type{
+    margin-top: 0;
+}
+
+.challenge-box p{
+    font-size: 9px;
+    color: #d8d8e6;
+    margin: 0;
+}
+
+.feature-box{
+    display: flex;
     gap: 20px;
+    align-items: center;
+    padding: 20px !important;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.feature-box.reverse{
+    flex-direction: row-reverse;
+}
+
+.feature-text{
+    flex: 1 1 280px;
+}
+
+.feature-text h4{
+    color: var(--accent-blue);
+    font-size: 10px;
+    margin: 0 0 10px 0;
+}
+
+.feature-text p{
+    font-size: 9px;
+    color: #d8d8e6;
+    margin: 0;
+}
+
+.feature-image{
+    flex: 0 0 180px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-image .placeholder-box{
+    width: 170px;
+    height: 120px;
+}
+
+.tech-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.tech-badge{
+    font-family: "Press Start 2P", monospace;
+    font-size: 9px;
+    padding: 8px 14px;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+}
+
+.tech-badge.is-programming{
+    background: var(--accent-purple);
+}
+
+.tech-badge.is-tools{
+    background: #7b5fd6;
+}
+
+.tech-badge.is-concepts{
+    background: transparent;
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.learned-text p{
+    font-size: 9px;
+    color: #d8d8e6;
+    margin: 0 0 14px 0;
+}
+
+.media-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.media-item{
     text-align: center;
 }
 
-.info-grid p {
-    font-size: 12px;
-}
-
-.challenge-card {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 3px solid white;
-}
-
-.challenge-card:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.challenge-text {
-    flex: 2;
-}
-
-.challenge-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.challenge-image img {
+.media-item .placeholder-box{
     width: 100%;
-    max-width: 280px;
-    border: 4px solid white;
-    image-rendering: pixelated;
+    height: 140px;
+    margin-bottom: 10px;
 }
 
-.back-button {
-    display: flex;
-    justify-content: center;
+.media-item span{
+    font-size: 9px;
+    color: #ffffff;
 }
 
-/*-------TAGS-------*/
-
-.project-tags {
+.project-links{
     display: flex;
-    justify-content: center;
+    gap: 14px;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 25px;
 }
 
-.project-tag {
-    display: inline-block;
-    padding: 8px 14px;
-    background-color: #dbb7cb;
+.project-links .nes-btn{
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    background: var(--accent-purple) !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/*---------LINKS----------*/
+.links-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 0 24px 20px 24px;
+}
+
+.links-grid .nes-btn {
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white !important;
+    background-color: var(--accent-purple);
+}
+
+/*-----PAGE HEADER------*/
+.page-header {
+    padding: 24px 24px 16px 24px;
+    border-bottom: 4px dotted var(--border-blue);
+    margin-bottom: 24px;
+}
+
+.page-header h1 {
+    color: var(--accent-blue);
+    font-size: 20px;
+    margin: 0 0 16px 0;
+}
+
+.page-header p {
+    font-size: 11px;
     color: white;
-    border: 2px solid white;
-    box-shadow: inset -4px -4px #a996a0;
-    font-size: 12px;
-    line-height: 1;
+    margin: 0;
 }
 
-/*--------CONTACT-------*/
-
-.contact-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 25px;
+/*------FOOTER----------*/
+footer.site-footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 9px;
+    color: var(--accent-purple);
 }
 
-/*------- FOR PHONE VIEW------*/
-
-@media (max-width: 800px) { 
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-        padding: 25px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-image img {
-        max-width: 220px;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-content {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-image img {
-        max-width: 220px;
-    }
-
-    .project-hero.content {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .project-hero-text {
-        text-align: center;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .challenge-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .challenge-image img {
-        max-width: 220px;
-    }
+@media (max-width: 800px) {
+    .projects-grid{ grid-template-columns: 1fr; }
+    nav.main-nav{ font-size: 9px; gap: 14px; }
+    .hero{ flex-direction: column; text-align: center; }
+    .hero-image{ order: -1; }
+    .media-grid{ grid-template-columns: 1fr; }
+    .feature-box, .feature-box.reverse{ flex-direction: column; }
 }

@@ -13,47 +13,81 @@
 </head>
 
 <body>
-    <!---NAV MENU BAR-->
-    <nav class="navbar">
-        <a class="logo" href="index.html">
-            <i class="nes-icon star is-medium"></i>
-            <span>Piper's Portfolio</span>
-        </a>
+    
+    <div class="page-wrap">
+        <!--HEADER-->
+        <header class="site-header">
+            <div class="logo">
+                <i class="nes-icon is-small star"></i>
+                <span class="logo-text">PIPER'S PORTFOLIO</span>
+            </div>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
+            <nav class="main-nav">
+                <a href="index.html">HOME</a>
+                <a href="projects.html">PROJECTS</a>
+                <a href="#" class="active">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </header>
 
-    <main class="page-content">
-        <section class="nes-container with-title">
-            <p class="title">About Me</p>
-
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="assets/profile.png" alt="Photo of Piper">
-                </div>
-
-                <div class="about-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-
-                </div>
+        <!-- ABOUT HERO -->
+        <section class="about-hero">
+            <div class="about-hero-text">
+                <h1>ABOUT ME</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua.
+                </p>
+            </div>
+            <div class="about-hero-image">
+                <img src="assets/profile.png" alt="Profile picture">
             </div>
         </section>
-    </main>
 
-    <script src="script.js"></script>
+        <!-- SKILLS / EDUCATION -->
+        <div class="about-columns" style="border-top: dotted var(--border-blue); padding-top: 24px;">
+
+            <div class="skills-col">
+                <h2><i class="nes-icon star is-small"></i> SKILLS</h2>
+                <div class="skills-sub-columns">
+                    <ul>
+                        <li>skill</li>
+                        <li>skill</li>
+                        <li>skill</li>
+                        <li>skill</li>
+                        <li>skill</li>
+                        <li>skill</li>
+                    </ul>
+                    <ul>
+                        <li>skill</li>
+                        <li>skill</li>
+                        <li>skill</li>
+                        <li>skill</li>
+                        <li>skill</li>
+                        <li>skill</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="education-col">
+                <h2><i class="nes-icon star is-small"></i> EDUCATION</h2>
+                <ul>
+                    <li>Secondry</li>
+                    <li>Tertiary</li>
+                    <li>Intern</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--FOOTER-->
+        <footer class="site-footer">
+            <i class="nes-icon heart is-small"></i> Thanks for visiting! <i class="nes-icon heart is-small"></i>
+        </footer>
+
+    </div>
+
 </body>
 
 </html>

@@ -18,117 +18,108 @@
 
 <body>
 
-    <!---NAV MENU BAR-->
-    <nav class="navbar">
-        <a class="logo" href="index.html">
-            <i class="nes-icon star is-medium"></i>
-            <span>Piper's Portfolio</span>
-        </a>
+    <div class="page-wrap">
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <!--HEADER-->
+        <header class="site-header">
+            <div class="logo">
+                <i class="nes-icon is-small star"></i>
+                <span class="logo-text">PIPER'S PORTFOLIO</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="#" class="active">HOME</a>
+                <a href="projects.html">PROJECTS</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </header>
+
+        <!--HERO-->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>HI, I'M PIPER!</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing 
+                    elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. 
+                </p>
+                <a href="about.html" class="nes-btn is-primary about-btn">
+                    <i class="nes-icon heart is-small"></i>
+                    <span>About Me</span>
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/hero-image.png" alt="hero image">
+            </div>
+        </section>
+
+        <!--RECENT PROJECTS-->
+        <div class="section-header">
+            <h2><i class="nes-icon star is-small"></i> Recent Projects</h2>
+            <a href="projects.html">View All &rarr;</a>
         </div>
-    </nav>
 
-    <main class="page-content">
-        <section class="nes-container with-title hero-section">
-            <!------BRIEF INTRO-->
-            <p class="title">Hi, I'm Piper!</p>
-
-            <div class="hero-content">
-
-                <div class="hero-text">
-                    <p>
-                        I'm a game developer and programmer based in New Zealand, currently completing 
-                        my Bachelor of Digital Screens, majoring in Game Development at the University 
-                        of Canterbury. 
-                    </p>
-
-                    <p>
-                        I enjoy creating polished gameplay systems and mechanics, with a 
-                        particular interest in engaging player experiences through clean, scalable code.
-                    </p>
-                    
-                    <p>    
-                        This portfolio showcases a selection of the games, prototypes, and technical projects
-                        I've developed throughout my studies and personal work.
-                    </p>
+        <div class="projects-grid">
+            <div class="nes-container is-dark project-card">
+                <div class="thumb">
+                    <img src="assets/wiremus-tour.png" alt="Wiremu's tour screenshot">
                 </div>
-            
-                <div class="hero-image">
-                    <img src="assets/profile.png" alt="Photo of Piper">
-                </div>
-
-            </div>
-            
-            <div class="hero-buttons">
-                <a href="projects.html" class="nes-btn btn-pink">View Projects</a>
-                <a href="about.html" class="nes-btn btn-pink">About Me</a>
-            </div>
-        </section>
-
-        <!-----SKILLS SECTION-->
-        <section class="nes-container with-title">
-            <p class="title">Skills</p>
-            <p>
-                I have experience with various game development tools and programming 
-                languages, including:
-            </p>
-            <ul>
-                <li>Unity (C#)</li>
-                <li>Unreal Engine (C++)</li>
-                <li>Blender</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>HTML/CSS</li>
-            </ul>
-
-            <a href="about.html" class="nes-btn btn-pink">Learn More</a>
-        </section>
-
-        <!-------PROJECTS SECTION------->
-        <section class="nes-container with-title">
-            <p class="title">Recent Projects</p>
-            <div class="project-grid">
-
-                <!--wiremus tour-->
-                <div class="nes-container project-card">
+                <div class="project-info">
                     <h3>Wiremu's Tour</h3>
-                    <p>An education visual novel about New Zealands wildlife.</p>
-                    <a href="projects/wiremus-tour.html" class="nes-btn is-success">Read More</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="project.html?id=wiremus-tour" class="nes-btn is-primary project-btn">View Project</a>
                 </div>
-
-                <!-- streetside -->
-                <div class="nes-container project-card">
-                    <h3>Street Side</h3>
-                    <p>A two-player co-op game with split-screen and graffiti mechanics</p>
-                    <a href="projects/streetside.html" class="nes-btn is-success">Read More</a>
-                </div> 
-
-                <div class="grid-button">
-                    <a href="projects.html" class="nes-btn btn-pink">View All</a>
-                </div>
-
             </div>
 
+            <div class="nes-container is-dark project-card">
+                <div class="thumb">
+                    <img src="assets/streetside.png" alt="Streetside screenshot">
+                </div>
+                <div class="project-info">
+                    <h3>Streeside</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="project.html?id=streetside" class="nes-btn is-primary project-btn">View Project</a>
+                </div>
+            </div>
 
-        </section>
+            <div class="nes-container is-dark project-card">
+                <div class="thumb">
+                    <img src="assets/echoes.png" alt="Echoes in the Facility screenshot">
+                </div>
+                <div class="project-info">
+                    <h3>Echoes in the Facility</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="project.html?id=echoes" class="nes-btn is-primary project-btn">View Project</a>
+                </div>
+            </div>
+        </div>
 
-        <!-----CONTACT SECTION-->
-        <section class="nes-container with-title">
-            <p class="title">Contact</p>
-            <p>
-                Interested in my work? You can find my contact details on the contact page.
-            </p>
-            <a href="contact.html" class="nes-btn is-warning">Contact Me</a>
-        </section>
+        <!--LINKS-->
+        <div class="section-header">
+            <h2><i class="nes-icon star is-small"></i> Links</h2>
+            <a href="contact.html">Contact Me &rarr;</a>
+        </div>
 
-    </main>
+        <div class="links-grid">
+            <a href="https://github.com/piperrenaud" target="_blank" class="nes-btn">
+                <i class="nes-icon github is-small"></i> GitHub
+            </a>
+            <a href="https://chuuchuu2.itch.io/" target="_blank" class="nes-btn">
+                <i class="nes-icon is-small trophy"></i> Itch.io
+            </a>
+            <a href="https://www.linkedin.com/in/piper-renaud-207682303/" target="_blank" class="nes-btn">
+                <i class="nes-icon linkedin is-small"></i> LinkedIn
+            </a>
+        </div>
 
-    <script src="script.js"></script>
+        <!--FOOTER-->
+        <footer class="site-footer">
+            <i class="nes-icon heart is-small"></i> Thanks for visiting! <i class="nes-icon heart is-small"></i>
+        </footer>
+    </div>
+    
 </body>
     
 </html>

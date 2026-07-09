@@ -14,62 +14,61 @@
 
 <body>
 
-    <!---NAV MENU BAR-->
-    <nav class="navbar">
-        <a class="logo" href="index.html">
-            <i class="nes-icon star is-medium"></i>
-            <span>Piper's Portfolio</span>
-        </a>
-
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <main class="page-content">
-        <section class="nes-container with-title">
-            <p class="title">Contact Me</p>
-
-            <p>
-                You can contact me through the links below.
-            </p>
-
-            <!--CONTACT LINKS-->
-            <div class="contact-list">
-                <!--email-->
-                <a href="mailto:piper@ignavus.net" 
-                class="nes-btn is-primary"
-                target="_blank"
-                rel="noopener noreferrer">
-                Email</a>
-
-                <!--linkedin-->
-                <a href="https://www.linkedin.com/in/piper-renaud-207682303/" 
-                class="nes-btn is-success"
-                target="_blank"
-                rel="noopener noreferrer">
-                LinkedIn</a>
-
-                <!--github-->
-                <a href="https://github.com/piperrenaud" 
-                class="nes-btn is-warning"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub</a>
-
-                <!--CV-->
-                <a href="assets/Piper-Renaud-CV.pdf" 
-                class="nes-btn"
-                target="_blank"
-                rel="noopener noreferrer">
-                Download CV</a>
-                
+    <div class="page-wrap">
+        
+        <!--HEADER-->
+        <header class="site-header">
+            <div class="logo">
+                <i class="nes-icon is-small star"></i>
+                <span class="logo-text">PIPER'S PORTFOLIO</span>
             </div>
-        </section>
-    </main>
+
+            <nav class="main-nav">
+                <a href="index.html">HOME</a>
+                <a href="projects.html">PROJECTS</a>
+                <a href="about.html">ABOUT</a>
+                <a href="#" class="active">CONTACT</a>
+            </nav>
+        </header>
+
+        <!---CONTACT CARD-->
+        <div class="contact-wrap">
+            <div class="nes-container is-rounded contact-card">
+
+                <div class="contact-card-text">
+                    <h1><i class="nes-icon star is-small"></i> CONTACT ME</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+
+                    <div class="contact-buttons">
+                        <a href="https://github.com/piperrenaud" target="_blank" class="nes-btn">
+                            <i class="nes-icon github is-small"></i> GitHub
+                        </a>
+                        <a href="https://chuuchuu2.itch.io/" target="_blank" class="nes-btn">
+                            <i class="nes-icon trophy is-small"></i> Itch.io
+                        </a>
+                        <a href="https://www.linkedin.com/in/piper-renaud-207682303/" target="_blank" class="nes-btn">
+                            <i class="nes-icon linkedin is-small"></i> LinkedIn
+                        </a>
+                        <a href="mailto:piper@ignavus.net" target="_blank" class="nes-btn">
+                            <i class="nes-icon gmail is-small"></i> Email
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-image">
+                    <img src="assets/contact.png" alt="contact image">
+                </div>
+            </div>
+        </div>
+
+        <!--FOOTER-->
+        <footer class="site-footer">
+            <i class="nes-icon heart is-small"></i> Thanks for visiting! <i class="nes-icon heart is-small"></i>
+        </footer>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
