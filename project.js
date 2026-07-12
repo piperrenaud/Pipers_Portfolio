@@ -40,8 +40,12 @@ function renderProject(project) {
   // Title
   html += `<h1 class="project-detail-title">${project.title.toUpperCase()}</h1>`;
 
-  // Hero image
-  html += `<div class="project-hero-image">${imageOrPlaceholder(project.heroImage, 260, 170)}</div>`;
+  // Hero media
+    html += `
+    <div class="project-hero-image">
+        ${heroMedia(project.heroVideo, project.heroImage, 1000, 560)}
+    </div>
+    `;
 
   // About the project
   html += `
@@ -80,47 +84,6 @@ function renderProject(project) {
       ${bulletList(project.myRole.responsibilities)}
     </div>
   `;
-
-  // Technical Challenges
-    if (project.technicalChallenges && project.technicalChallenges.length) {
-    html += `<h2 class="section-title">TECHNICAL CHALLENGES</h2>`;
-    project.technicalChallenges.forEach(c => {
-        html += `
-        <div class="nes-container is-dark challenge-box">
-            <span class="challenge-tag">${c.name}:</span>
-
-            <h4>Problem</h4>
-            <p>${c.problem}</p>
-
-            <h4>Solution</h4>
-            <p>${c.solution}</p>
-
-            <h4>Result</h4>
-            ${Array.isArray(c.result) ? bulletList(c.result) : bulletList(c.result.split(",").map(r => r.trim()))}
-        </div>
-        `;
-    });
-    }
-
-  // Interesting Features
-    if (project.features && project.features.length) {
-    html += `<h2 class="section-title">INTERESTING FEATURES</h2>`;
-
-    project.features.forEach(f => {
-        html += `
-        <div class="nes-container is-dark feature-box">
-            <div class="feature-text">
-            <h3 class="feature-name">${f.name || "Feature Name"}</h3>
-            <p>${f.text}</p>
-            </div>
-
-            <div class="feature-image">
-            ${imageOrPlaceholder(f.image, 220, 140)}
-            </div>
-        </div>
-        `;
-    });
-    }
 
   // Technologies Used
   html += `<h2 class="section-title">TECHNOLOGIES USED</h2>`;
@@ -162,6 +125,25 @@ function renderProject(project) {
   }
 
   root.innerHTML = html;
+}
+
+function heroMedia(videoSrc, imageSrc, width, height) {
+  const sizeStyle = `width:${width}px; height:${height}px;`;
+
+  if (videoSrc) {
+    return `
+      <video
+        controls
+        preload="metadata"
+        poster="${imageSrc || ''}"
+        style="${sizeStyle} object-fit:cover; border:4px solid #ffffff;"
+    >
+        <source src="${videoSrc}" type="video/mp4">
+    </video>
+    `;
+  }
+
+  return imageOrPlaceholder(imageSrc, width, height);
 }
 
 function init() {

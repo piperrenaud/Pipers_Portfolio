@@ -12,7 +12,11 @@
 body {
     background: var(--bg);
     color: var(--text-white);
-    font-family: "Press Start 2P", monospace;
+
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
     padding: 20px;
     line-height: 1.6;
 }
@@ -48,7 +52,7 @@ header.site-header {
 
 .logo-text {
     color: var(--accent-blue);
-    font-size: 14px;
+    font-size: 46px;
     letter-spacing: 1px;
 }
 
@@ -56,13 +60,14 @@ header.site-header {
     display: flex;
     align-items: center;
     gap: 22px;
-    font-size: 10px;
 }
 
 nav.main-nav a {
     color: var(--text-white);
     text-decoration: none;
     padding-bottom: 6px;
+    padding-right: 12px;
+    font-size: 36px;
 }
 
 nav.main-nav a.active {
@@ -77,44 +82,51 @@ nav.main-nav a:hover {
 /*---------HERO--------*/
 .hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 30px 24px;
-    flex-wrap: wrap;
+    padding: 30px 0px;
+    flex-wrap: nowrap;
 }
 
 .hero-text {
-    flex: 1 1 400px;
+    flex: 1;
+    max-width: 850px;
 }
 
 .hero-text h1 {
     color: var(--accent-blue);
-    font-size: 22px;;
+    font-size: 36px;;
     margin: 0 0 16px 0;
 }
 
 .hero-text p {
-    font-size: 11px;
+    font-size: 24px;
     color: var(--text-white);
     margin-bottom: 20px;
 }
 
 .about-btn {
-    font-family: "Press Start 2P", monospace;
-    font-size: 10px;
+    font-size: 30px;
     background-color: var(--accent-purple) !important;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    white-space: no-wrap;
+    white-space: nowrap;
 }
 
 .hero-image {
-    flex: 0 0 260px;
+    flex: 0 0 280px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    image-rendering: pixelated;
 }
 
 .placeholder-box {
@@ -148,12 +160,12 @@ nav.main-nav a:hover {
 
 .about-hero-text h1 {
     color: var(--accent-blue);
-    font-size: 20px;
+    font-size: 36px;
     margin: 0 0 18px 0;
 }
 
 .about-hero-text p {
-    font-size: 11px;
+    font-size: 24px;
     color: white;
     margin: 0;
 }
@@ -174,7 +186,7 @@ nav.main-nav a:hover {
 
 .about-columns h2 {
     color: var(--accent-blue);
-    font-size: 13px;
+    font-size: 30px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -197,7 +209,7 @@ nav.main-nav a:hover {
 }
 
 .skills-sub-columns li, .education-col li {
-    font-size: 10px;
+    font-size: 24px;
     color: white;
     padding: 4px 0;
     position: relative;
@@ -208,7 +220,7 @@ nav.main-nav a:hover {
     content: "";
     position: absolute;
     left: 0;
-    top: 9px;
+    top: 22px;
     width: 5px;
     height: 5px;
     background: white;
@@ -244,7 +256,7 @@ nav.main-nav a:hover {
 
 .contact-card-text h1 {
     color: white;
-    font-size: 18px;
+    font-size: 36px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -252,36 +264,42 @@ nav.main-nav a:hover {
 }
 
 .contact-card-text > p {
-    font-size: 10px;
+    font-size: 24px;
     color: white;
     margin: 0 0 26px 0;
 }
 
 .contact-buttons {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
-    max-width: 420px;
+    max-width: 600px;
 }
 
 .contact-buttons .nes-btn {
     background: var(--accent-purple) !important;
     border-color: white !important;
     color: white !important;
-    font-family: "Press Start 2P", monospace;
-    font-size: 10px;
+    font-size: 24px;
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10px;
-    padding: 10px 14px;
+    gap: 5px;
+    padding: 5px 14px;
 }
 
 .contact-image {
-    flex: 0 0 160px;
+    flex: 0 0 320px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    image-rendering: pixelated;
 }
 
 /*----SECTION HEADERS--------*/
@@ -297,7 +315,7 @@ nav.main-nav a:hover {
 
 .section-header h2 {
     color: var(--accent-blue);
-    font-size: 14px;
+    font-size: 30px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -305,8 +323,8 @@ nav.main-nav a:hover {
 }
 
 .section-header a {
-    color: var(--text-white);
-    font-size: 10px;
+    color: var(--accent-purple);
+    font-size: 24px;
     text-decoration: none;
 }
 
@@ -318,7 +336,7 @@ nav.main-nav a:hover {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
     padding: 0 24px 30px 24px;
 }
 
@@ -327,13 +345,13 @@ nav.main-nav a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 18px !important;
+    padding: 12px !important;
 }
 
 .project-card .thumb {
     width: 100%;
-    max-width: 220px;
-    height: 140px;
+    max-width: 340px;
+    height: 220px;
     border: 3px solid white;
     background: var(--bg);
     display: flex;
@@ -356,18 +374,18 @@ nav.main-nav a:hover {
 
 .project-info h3 {
     color: var(--accent-blue);
-    font-size: 11px;
-    margin-bottom: 12px;
+    font-size: 24px;
+    margin-bottom: 0px;
 }
 
 .project-info p {
-    font-size: 8px;
+    font-size: 18px;
     color: #cfcfe0;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .project-info a {
-    font-size: 8px;
+    font-size: 18px;
     color: var(--accent-purple);
     text-decoration: none;
 }
@@ -377,10 +395,9 @@ nav.main-nav a:hover {
 }
 
 .project-btn {
-    font-family: "Press Start 2P", monospace;
-    font-size: 8px;
+    font-size: 24px;
     background-color: var(--accent-purple) !important;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 /*--------PROJECT DETAIL TEMPLATE------------*/
@@ -390,7 +407,7 @@ nav.main-nav a:hover {
 
 .project-detail-title {
     color: var(--accent-blue);
-    font-size: 20px;
+    font-size: 36px;
     margin: 0 0 24px 0;
     padding-bottom: 14px;
     border-bottom: 4px dotted var(--accent-blue);
@@ -401,10 +418,11 @@ nav.main-nav a:hover {
     align-items: center;
     gap: 10px;
     color: var(--accent-blue);
-    font-size: 13px;
+    font-size: 24px;
     margin: 36px 0 18px 0;
     white-space: nowrap;
 }
+
 
 .section-title::after {
     content: "";
@@ -419,6 +437,7 @@ nav.main-nav a:hover {
     margin-bottom: 20px;
 }
 
+
 .about-project {
     text-align: center;
     max-width: 760px;
@@ -427,13 +446,13 @@ nav.main-nav a:hover {
 
 .about-project h3 {
     color: white;
-    font-size: 11px;
+    font-size: 20px;
     letter-spacing: 2px;
     margin: 0 0 1px 0;
 }
 
 .about-project p {
-    font-size: 9px;
+    font-size: 18px;
     color: white;
     margin: 0 0 14px 0;
 }
@@ -460,13 +479,13 @@ nav.main-nav a:hover {
 }
 
 .info-rows dt {
-    font-size: 12px;
+    font-size: 20px;
     color: #1982C4;
     grid-column: 1;
 }
 
 .info-rows dd {
-    font-size: 10px;
+    font-size: 18px;
     color: white;
     margin: 0;
     grid-column: 2;
@@ -474,7 +493,7 @@ nav.main-nav a:hover {
 
 .info-box.is-audience h4 {
     color: #1982C4;
-    font-size: 12px;
+    font-size:20px;
     margin: 0 0 12px 0;
 }
 
@@ -485,7 +504,7 @@ nav.main-nav a:hover {
 }
 
 .info-box-is-audience li {
-    font-size: 10px;
+    font-size: 18px;
     color: white;
     padding-left: 14px;
     position: relative;
@@ -504,18 +523,18 @@ nav.main-nav a:hover {
 
 .role-title {
     color: #1982C4;
-    font-size: 12px;
+    font-size: 20px;
     margin: 0 0 14px 0;
 }
 
 .role-subheading {
     color: #1982C4;
-    font-size: 10px;
+    font-size: 20px;
     margin: 18px 0 10px 0;
 }
 
 .role-text p{
-    font-size: 9px;
+    font-size: 18px;
     color: #d8d8e6;
     margin: 0 0 14px 0;
 }
@@ -527,7 +546,7 @@ nav.main-nav a:hover {
 }
  
 .bullet-list li{
-    font-size: 9px;
+    font-size: 18px;
     color: #ffffff;
     padding-left: 14px;
     position: relative;
@@ -544,80 +563,6 @@ nav.main-nav a:hover {
     background: #ffffff;
 }
 
-.challenge-box{
-    padding: 20px !important;
-    margin-bottom: 28px;
-}
-
-.challenge-tag{
-    display: inline-block;
-    font-size: 11px;
-    color: #1982C4;
-    margin-bottom: 14px;
-}
-
-.challenge-box h4{
-    font-size: 10px;
-    color: var(--accent-purple);
-    margin: 16px 0 8px 0;
-}
-
-.challenge-box h4:first-of-type{
-    margin-top: 0;
-}
-
-.challenge-box p{
-    font-size: 9px;
-    color: #d8d8e6;
-    margin: 0;
-}
-
-.feature-box{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    padding: 20px !important;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-}
-
-.feature-box.reverse{
-    flex-direction: row-reverse;
-}
-
-.feature-name {
-    font-size: 13px;
-    margin-bottom: 12px;
-    color: #1982C4;
-}
-
-.feature-text{
-    flex: 1 1 280px;
-}
-
-.feature-text h4{
-    color: var(--accent-blue);
-    font-size: 10px;
-    margin: 0 0 10px 0;
-}
-
-.feature-text p{
-    font-size: 9px;
-    color: #d8d8e6;
-    margin: 0;
-}
-
-.feature-image{
-    flex: 0 0 180px;
-    display: flex;
-    justify-content: center;
-}
-
-.feature-image .placeholder-box{
-    width: 170px;
-    height: 120px;
-}
-
 .tech-group{
     display: flex;
     flex-wrap: wrap;
@@ -626,8 +571,7 @@ nav.main-nav a:hover {
 }
 
 .tech-badge{
-    font-family: "Press Start 2P", monospace;
-    font-size: 9px;
+    font-size: 18px;
     padding: 8px 14px;
     border: 3px solid #ffffff;
     color: #ffffff;
@@ -646,7 +590,7 @@ nav.main-nav a:hover {
 }
 
 .learned-text p{
-    font-size: 9px;
+    font-size: 18px;
     color: #d8d8e6;
     margin: 0 0 14px 0;
 }
@@ -668,7 +612,7 @@ nav.main-nav a:hover {
 }
 
 .media-item span{
-    font-size: 9px;
+    font-size: 18px;
     color: #ffffff;
 }
 
@@ -680,8 +624,7 @@ nav.main-nav a:hover {
 }
 
 .project-links .nes-btn{
-    font-family: "Press Start 2P", monospace;
-    font-size: 10px;
+    font-size: 18px;
     background: var(--accent-purple) !important;
     border-color: #ffffff !important;
     color: #ffffff !important;
@@ -701,8 +644,7 @@ nav.main-nav a:hover {
 }
 
 .links-grid .nes-btn {
-    font-family: "Press Start 2P", monospace;
-    font-size: 10px;
+    font-size: 18px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -719,12 +661,12 @@ nav.main-nav a:hover {
 
 .page-header h1 {
     color: var(--accent-blue);
-    font-size: 20px;
+    font-size: 36px;
     margin: 0 0 16px 0;
 }
 
 .page-header p {
-    font-size: 11px;
+    font-size: 28px;
     color: white;
     margin: 0;
 }
@@ -733,7 +675,7 @@ nav.main-nav a:hover {
 footer.site-footer {
     text-align: center;
     padding: 16px;
-    font-size: 9px;
+    font-size: 24px;
     color: var(--accent-purple);
 }
 
