@@ -125,7 +125,7 @@ nav.main-nav a:hover {
 .hero-image img {
     width: 100%;
     max-width: 280px;
-    height: auto;
+    height: 140px;
     image-rendering: pixelated;
 }
 
